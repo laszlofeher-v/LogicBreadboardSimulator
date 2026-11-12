@@ -1,0 +1,71 @@
+# Built binaries and outputs
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.so
+*.o
+*.obj
+*.a
+*.lib
+*.dylib
+*.dll
+bin/
+gen/
+out/
+
+# Gradle build outputs and caches
+.gradle/
+build/
+*/build/
+app/build/
+
+# NDK / CMake / Native build
+.cxx/
+*/.cxx/
+app/.cxx/
+.externalNativeBuild/
+*/.externalNativeBuild/
+app/.externalNativeBuild/
+cmake-build-*/
+
+# Local configuration & environment
+local.properties
+local.properties.*
+
+# IDE files and caches
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+projectFilesBackup/
+captures/
+.navigation/
+
+# Android lint reports
+lint/
+lint-reports/
+
+# Signing & Keystores
+*.jks
+*.keystore
+*.key
+*.p12
+*.pfx
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs and profiling
+*.log
+*.hprof
+
+# Package / Jar files (preserve Gradle wrapper jar)
+*.jar
+*.aar
+!gradle/wrapper/gradle-wrapper.jar

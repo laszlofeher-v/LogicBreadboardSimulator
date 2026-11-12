@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tcoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="Tco"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/tcoUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="+"/>
+
+        <EditText
+            android:id="@+id/tco"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:numeric="decimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:maxLength="4"/>
+
+        <Button
+            android:id="@+id/tcoDown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="-"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tsetupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="Ts"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/tsetupUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="+"/>
+
+        <EditText
+            android:id="@+id/tsetup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:numeric="decimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:maxLength="4"/>
+
+        <Button
+            android:id="@+id/tsetupDown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="-"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tholdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="Th"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/tholdUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="+"/>
+
+        <EditText
+            android:id="@+id/thold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:numeric="decimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:maxLength="4"/>
+
+        <Button
+            android:id="@+id/tholdDown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="-"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/trecoveryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tr"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:enabled="true"/>
+
+        <Button
+            android:id="@+id/trecoveryUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="+"/>
+
+        <EditText
+            android:id="@+id/trecovery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:numeric="decimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:maxLength="4"/>
+
+        <Button
+            android:id="@+id/trecoveryDown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="-"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/tremovalTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tm"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:enabled="true"/>
+
+        <Button
+            android:id="@+id/tremovalUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="+"/>
+
+        <EditText
+            android:id="@+id/tremoval"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:enabled="true"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:numeric="decimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:maxLength="4"/>
+
+        <Button
+            android:id="@+id/tremovalDown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:longClickable="true"
+            android:text="-"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.logicbreadboard.simulator.SchematicViewer
+        android:id="@+id/schematic_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="@color/CadetBlue"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_above="@+id/buttons"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </com.logicbreadboard.simulator.SchematicViewer>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/schematic_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:minHeight="48dp"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:visibility="visible"
+            android:baselineAligned="false">
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="addButtonClicked"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/run_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="runButtonClicked"
+                android:text="Run" />
+
+            <Button
+                android:id="@+id/schematic_scope_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="scopeButtonClicked"
+                android:text="Scope" />
+
+            <Button
+                android:id="@+id/schematic_help_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Help"
+                android:onClick="helpButtonClicked" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/simulator_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:minHeight="48dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/simulationTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text="0"
+                android:textAlignment="viewEnd"
+                android:textSize="4mm" />
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="editButtonClicked"
+                android:text="EDIT" />
+
+            <Button
+                android:id="@+id/scope_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="scopeButtonClicked"
+                android:text="Scope" />
+
+            <Button
+                android:id="@+id/help_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="helpButtonClicked"
+                android:text="Help" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scope_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:minHeight="48dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/time_unzoom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="unzoomScopeButtonClicked"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/run_from_scope_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RUN"
+                android:onClick="runFromScopeButtonClicked" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="scopeBackButtonClicked"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/time_zoom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="zoomScopeButtonClicked"
+                android:text="+" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ZoomControls
+        android:id="@+id/zoomControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/context_menu"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/zoomControl"
+        android:layout_alignEnd="@+id/zoomControl"
+        android:layout_above="@+id/buttons">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/undo"
+            android:text="UNDO"
+            android:minHeight="48dp"
+            android:onClick="undoButtonClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REDO"
+            android:id="@+id/redo"
+            android:minHeight="48dp"
+            android:onClick="redoButtonClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROTATE LEFT"
+            android:id="@+id/rotate_left"
+            android:minHeight="48dp"
+            android:onClick="rotateLeftClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROTATE RIGHT"
+            android:id="@+id/rotate_right"
+            android:minHeight="48dp"
+            android:onClick="rotateRightClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEL"
+            android:id="@+id/del"
+            android:minHeight="48dp"
+            android:visibility="visible"
+            android:onClick="deleteButtonClicked"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:id="@+id/cancel"
+            android:minHeight="48dp"
+            android:onClick="cancelButtonClicked"
+            android:layout_centerHorizontal="true"
+            android:background="@color/DarkRed"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLONE"
+            android:id="@+id/clone"
+            android:minHeight="48dp"
+            android:onClick="copyClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MORPH"
+            android:id="@+id/morph"
+            android:minHeight="48dp"
+            android:onClick="morphClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVERT"
+            android:id="@+id/invert"
+            android:minHeight="48dp"
+            android:onClick="invertClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNLOCK"
+            android:id="@+id/unlock"
+            android:minHeight="48dp"
+            android:nestedScrollingEnabled="true"
+            android:onClick="unlockClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD INPUT"
+            android:id="@+id/add_input"
+            android:minHeight="48dp"
+            android:onClick="addInputClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIME"
+            android:id="@+id/delay"
+            android:minHeight="48dp"
+            android:onClick="timeClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERTICAL"
+            android:id="@+id/align_vertical"
+            android:minHeight="48dp"
+            android:onClick="alignVerticalClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HORIZONTAL"
+            android:id="@+id/align_horizontal"
+            android:minHeight="48dp"
+            android:onClick="alignHorizontalClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INCLUDE"
+            android:id="@+id/include"
+            android:minHeight="48dp"
+            android:onClick="includeClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LABEL"
+            android:id="@+id/label"
+            android:minHeight="48dp"
+            android:onClick="labelClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCK"
+            android:id="@+id/lock"
+            android:minHeight="48dp"
+            android:onClick="lockClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NET"
+            android:id="@+id/show_net"
+            android:minHeight="48dp"
+            android:onClick="showNetClicked"
+            android:layout_alignParentTop="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

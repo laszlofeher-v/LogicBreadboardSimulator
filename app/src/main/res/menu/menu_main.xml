@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_new_schematic" android:title="@string/action_new_schematic"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_new_breadboard" android:title="@string/action_new_breadboard"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_open" android:title="@string/action_open"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_download" android:title="@string/action_download"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_save" android:title="@string/action_save"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_save_as" android:title="@string/action_save_as"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_change_gate_symbol" android:title="@string/gate_symbol"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_auto_zoom" android:title="@string/auto_zoom"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/reset_level" android:title="@string/reset_level_u"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/spike" android:title="@string/spike_detection"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/ff_check" android:title="@string/enable_ff_check"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/wire_level_display" android:title="@string/enable_wire_level"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_change_orientation" android:title="@string/orientation"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_change_color_theme" android:title="@string/color_theme"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/center" android:title="@string/center"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_45" android:title="@string/action_45"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_last_route" android:title="@string/action_last_route"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_draw_icons" android:title="@string/action_draw_icons"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/net_number" android:title="@string/show_net_number"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/hide_zoom_control" android:title="@string/hide_zoom_control"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_about" android:title="@string/action_about"
+          android:orderInCategory="100" app:showAsAction="never" />
+</menu>

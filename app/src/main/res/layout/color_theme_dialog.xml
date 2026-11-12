@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/white_on_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/white_on_black"/>
+
+    <Button
+        android:id="@+id/black_on_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/black_on_white"/>
+
+    <Button
+        android:id="@+id/black_on_silver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/black_on_silver"/>
+
+    <Button
+        android:id="@+id/black_on_green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/black_on_green"/>
+
+
+</LinearLayout>
