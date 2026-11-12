@@ -65,7 +65,8 @@ Desktop.ini
 *.log
 *.hprof
 
-# Package / Jar files (preserve Gradle wrapper jar)
+# Package / Jar files (preserve Gradle wrapper jar and published APKs in apk/)
 *.jar
 *.aar
 !gradle/wrapper/gradle-wrapper.jar
+!apk/*.apk

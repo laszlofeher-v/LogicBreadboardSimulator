@@ -161,9 +161,9 @@ adb devices
   ```
 - **Or install pre-built APK via ADB:**
   ```bash
-  adb install -r app/build/outputs/apk/debug/app-debug.apk
+  adb install -r apk/LogicBreadboardSimulator-v1.1-debug.apk
   ```
-- **Manual APK installation:** Transfer `app/build/outputs/apk/debug/app-debug.apk` to the phone (via Drive, email, or USB storage) and open it with a file manager to install.
+- **Manual APK installation:** Download [`apk/LogicBreadboardSimulator-v1.1-debug.apk`](apk/LogicBreadboardSimulator-v1.1-debug.apk) (or use the freshly built `app/build/outputs/apk/debug/app-debug.apk`), transfer it to your phone (via Drive, email, or USB storage), and open it with a file manager to install.
 
 ## Useful Commands
 
